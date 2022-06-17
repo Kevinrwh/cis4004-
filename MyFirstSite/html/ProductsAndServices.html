@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Products page -->
+    <!-- Author: Kevin Ramos. Date Created: 2/20/21 -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/style.css">
+        <script type = "text/javascript" src="../javascript/script.js"></script>
+
+        <!-- Extra stuff for bootstrap -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+              width: 70%;
+              margin: auto;
+          }
+        </style>
+        <!-- end bootstrap stuff-->
+
+        <title>Our Offerings</title>
+    </head>
+    <body>
+        <!-- Old version of navigation -->
+<!--
+        <nav class = "navigation">
+            <a class="active" href="../index.html">Home</a>
+            <a href="../html/AboutUs.html">About Us</a>
+            <a href="ProductsAndServices.html">Our Offerings</a>
+        </nav>
+-->
+        <!-- New navigation -->
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <!-- Our pages-->
+                <li><a href="../index.html" data-toggle="tooltip" title = "Our Home Page!">Home</a></li>
+                <li><a href="../html/AboutUs.html" data-toggle="tooltip" title = "More about us!">About Us</a><a href="html/AboutUs.html"><span class="glyphicon glyphicon-info-sign"></span> </a></li>
+                <li class="active"><a href="ProductsAndServices.html">Products and Services</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <h1>
+            Everything is handcrafted and made with love
+        </h1>
+
+        <!-- List of beverages and other offerings -->
+        <section>
+            <h2><strong>Beverages</strong></h2>
+            <ul id ="drinklist">
+                <li>Espresso</li>
+                <li>Latte</li>
+                <li>Cappuccino</li>
+                <li>Mocha</li>
+            </ul>
+        </section>
+        <section>
+            <h2><strong>Baked Goods</strong></h2>
+            <ul id="foodlist">
+                <li>Croissant</li>
+                <li>Lemon Cake</li>
+                <li>Muffins: Blueberry, Lemon Poppy Seed, Cranberry Orange</li>
+            </ul>
+        </section>
+
+        <!-- Non-Bootstrap Form for Delivery -->
+        <h1>Get it delivered!</h1>
+        <form action = "/cgi-bin/test.cgi"name = "myForm" onsubmit = "return(validate()) && validateEmail();">
+            <table cellspacing = "2" cellpadding = "2" border = "1">
+
+                <!-- first name -->
+                <tr>
+                    <td align = "right">First Name</td>
+                    <td><input type = "text" name = "firstName" id ="firstName"/></td>
+                </tr>
+
+                <!-- last name -->
+                <tr>
+                    <td align = "right">Last Name</td>
+                    <td><input type = "text" name = "lastName" /></td>
+                </tr>
+
+                <!-- address -->
+                <tr>
+                    <td align = "right">Address</td>
+                    <td><input type = "text" name = "address" /></td>
+                </tr>
+
+                <!-- city -->
+                <tr>
+                    <td align = "right">City</td>
+                    <td><input type = "text" name = "city" /></td>
+                </tr>
+
+                <!-- state -->
+                <tr>
+                    <td align = "right">State</td>
+                    <td>
+                        <select name = "state">
+                            <option value = "-1" selected>[choose yours]</option>
+                            <option value = "1">Florida</option>
+                            <option value = "2">Texas</option>
+                            <option value = "3">Indiana</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- zip -->
+                <tr>
+                    <td align = "right">Zip Code</td>
+                    <td><input type = "text" name = "Zip" /></td>
+                </tr>
+
+                <!-- Phone number -->
+                <tr>
+                    <td align = "right">Phone number (Digits Only)<br></td><br>
+                    <td><input type = "text" name = "phone" /><br><input type="radio" id="phoneType1" name="phoneType" value="personal">
+                        <label for="personal">Personal</label><br>
+                        <input type="radio" id="phoneType2" name="phoneType" value="business">
+                        <label for="business">Business</label><br></td>
+                </tr>
+
+                <!-- email -->
+                <tr>
+                    <td align = "right">E-mail</td>
+                    <td><input type = "text" name = "EMail" /></td>
+                </tr>
+
+                <!-- Submit button -->
+                <tr>
+                    <td align = "right"></td>
+                    <td><input type = "submit" value = "Submit" /></td>
+                </tr>
+
+            </table>
+        </form>
+
+        <h3><i>Mmmm....</i></h3>
+        <img id="croissant" src="../images/croissants.jpg" alt="croissant image" style="width:400px;height:500px;">
+    </body>
+</html>

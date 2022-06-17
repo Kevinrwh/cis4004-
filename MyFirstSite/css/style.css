@@ -1,0 +1,122 @@
+/* At least three class attributes */
+
+body {
+    background-image: radial-gradient(white, pink, skyblue);
+    text-align: center;
+    color: palevioletred;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: grey;
+}
+
+a:hover {
+    color: palevioletred;
+}
+
+p {
+    color:white;
+    font-style: normal;
+
+}
+
+h2 {
+    background-color: crimson;
+    font-style: italic;
+    font-weight: 200;
+}
+
+section {
+    font-weight: bold;
+}
+
+h3 {
+    font-style: oblique;
+}
+
+.trademark {
+    color: beige;
+    text-shadow: 8px 3px 0 black;
+}
+
+.navigation {
+    color: darkcyan;
+}
+
+.art {
+    color: azure;
+}
+
+#address {
+    font-style: italic;
+}
+
+#abbreviation {
+    color: gold;
+    text-align: right;
+}
+
+/*
+#drinklist {
+color:red;
+align-items: center;
+}*/
+
+#drinklist {
+    color: palevioletred;
+    margin:0;
+    padding:0;
+    text-align: center;
+    list-style:none;
+}
+
+#foodlist {
+    margin:0;
+    padding:0;
+    text-align: center;
+    list-style:none;
+}
+
+ul li {
+    padding: 2px 5px;
+}
+
+li::marker {
+    color: pink;
+}
+
+#croissant {
+    box-shadow: 5px 5px 0 pink;
+}
+
+#plant {
+    transform: scale(.9, .9);
+    border-radius: 30px;
+    border-image: url(../images/borderimg.jpg) 10% stretch;
+}
+
+@keyframes fontchange {
+    from{color: white}
+    to{color: palevioletred}
+}
+
+#aboutinfo {
+    animation-name: fontchange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+section h2 {
+    color: white;
+}
+
+form {
+    display: inline-block;
+}
